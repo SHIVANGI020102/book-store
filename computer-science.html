@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="inner-body">
+    <h2 class="page-title">Computer Science Department</h2>
+    <p class="page-desc">Browse our collection of Computer Science textbooks and resources.</p>
+    <nav class="nav-links">
+        <a href="index.html" class="btn-home"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        <a href="register.html"><i class="fa-solid fa-user-plus"></i> Registration</a>
+        <a href="catalogue.html"><i class="fa-solid fa-book"></i> Catalogue</a>
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+    </nav>
+
+    <div class="books-container">
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Data Structures and Algorithms</h3>
+            <p class="author">by Mark Allen Weiss</p>
+            <p class="description">A comprehensive guide to data structures and algorithms with practical implementations.</p>
+            <p class="price">₹1,299</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Introduction to Python Programming</h3>
+            <p class="author">by Guido van Rossum</p>
+            <p class="description">Learn Python programming from basics to advanced concepts with real-world examples.</p>
+            <p class="price">₹899</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Database Management Systems</h3>
+            <p class="author">by Ramakrishnan & Gehrke</p>
+            <p class="description">Master relational databases, SQL, and modern database concepts.</p>
+            <p class="price">₹1,499</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Web Development with HTML, CSS & JavaScript</h3>
+            <p class="author">by Jon Duckett</p>
+            <p class="description">Build responsive websites with modern web technologies and best practices.</p>
+            <p class="price">₹1,199</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Operating Systems Concepts</h3>
+            <p class="author">by Silberschatz, Galvin & Gagne</p>
+            <p class="description">Understand core concepts of operating systems including processes, memory, and I/O.</p>
+            <p class="price">₹1,599</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Computer Networks</h3>
+            <p class="author">by Andrew S. Tanenbaum</p>
+            <p class="description">Explore networking architectures, protocols, and internet technologies.</p>
+            <p class="price">₹1,699</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <style>
+        .books-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .book-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-image {
+            font-size: 3rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8fafc;
+            border-radius: 6px;
+        }
+
+        .book-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-card .author {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-card .description {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .book-card .price {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #f59e0b;
+            margin-bottom: 1rem;
+        }
+
+        .btn-add-cart {
+            background-color: #0f172a;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .btn-add-cart:hover {
+            background-color: #1e293b;
+        }
+    </style>
+</body>
+</html>

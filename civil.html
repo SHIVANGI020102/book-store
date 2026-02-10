@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="inner-body">
+    <h2 class="page-title">Civil Engineering Department</h2>
+    <p class="page-desc">Browse our collection of Civil Engineering textbooks and resources.</p>
+        <nav class="nav-links">
+        <a href="index.html" class="btn-home"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        <a href="register.html"><i class="fa-solid fa-user-plus"></i> Registration</a>
+        <a href="catalogue.html"><i class="fa-solid fa-book"></i> Catalogue</a>
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+    </nav>
+
+
+    <div class="books-container">
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Structural Analysis</h3>
+            <p class="author">by R.C. Hibbeler</p>
+            <p class="description">Master methods for analyzing structures, beams, and trusses.</p>
+            <p class="price">₹1,799</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Concrete Technology</h3>
+            <p class="author">by M.S. Shetty</p>
+            <p class="description">Comprehensive guide to concrete mix design and construction practices.</p>
+            <p class="price">₹1,599</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Geotechnical Engineering</h3>
+            <p class="author">by Braja Das</p>
+            <p class="description">Learn soil mechanics, foundation design, and ground investigation.</p>
+            <p class="price">₹1,899</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Water Resources Engineering</h3>
+            <p class="author">by Ray K. Linsley</p>
+            <p class="description">Master hydrology, water supply systems, and dam engineering.</p>
+            <p class="price">₹1,699</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Transportation Engineering</h3>
+            <p class="author">by Khanna & Justo</p>
+            <p class="description">Comprehensive coverage of road design, traffic, and transportation systems.</p>
+            <p class="price">₹1,599</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+            <div class="book-image">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Environmental Engineering</h3>
+            <p class="author">by Metcalf & Eddy</p>
+            <p class="description">Learn water treatment, wastewater management, and pollution control.</p>
+            <p class="price">₹1,799</p>
+            <button class="btn-add-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <style>
+        .books-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .book-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-image {
+            font-size: 3rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8fafc;
+            border-radius: 6px;
+        }
+
+        .book-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-card .author {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-card .description {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .book-card .price {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #f59e0b;
+            margin-bottom: 1rem;
+        }
+
+        .btn-add-cart {
+            background-color: #0f172a;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .btn-add-cart:hover {
+            background-color: #1e293b;
+        }
+    </style>
+</body>
+</html>

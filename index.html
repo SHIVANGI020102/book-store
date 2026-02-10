@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prestige College Online Book Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@400;
+500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+--primary-navy: #0f172a; /* Deep Navy */
+--accent-gold: #f59e0b; /* Gold/Amber */
+--text-dark: #1e293b;
+--text-gray: #64748b;
+--bg-light: #f8fafc;
+--bg-white: #ffffff;
+--border-color: #e2e8f0;
+--font-serif: 'Playfair Display', serif;
+--font-sans: 'Source Sans 3', sans-serif;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: var(--font-sans);
+background-color: var(--bg-white);
+color: var(--text-dark);
+height: 100vh;
+display: flex;
+flex-direction: column;
+}
+header {
+background-color: var(--primary-navy);
+color: white;
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 4px solid var(--accent-gold);
+}
+.logo-area {
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+.logo-icon {
+background-color: var(--accent-gold);
+color: var(--primary-navy);
+width: 40px;
+height: 40px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.2rem;
+}
+.logo-text h1 {
+font-family: var(--font-serif);
+font-size: 1.5rem;
+font-weight: 700;
+line-height: 1.1;
+}
+.logo-text span {
+font-family: var(--font-sans);
+font-size: 0.85rem;
+opacity: 0.8;
+font-weight: 400;
+}
+.nav-links {
+display: flex;
+align-items: center;
+gap: 1.5rem;
+}
+.nav-links a {
+text-decoration: none;
+color: #cbd5e1;
+font-weight: 500;
+font-size: 0.95rem;
+transition: color 0.3s;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+.nav-links a:hover {
+color: white;
+}
+.btn-home {
+background-color: var(--accent-gold);
+color: var(--primary-navy) !important;
+padding: 0.5rem 1rem;
+border-radius: 6px;
+font-weight: 600 !important;
+}
+.layout-wrapper {
+display: flex;
+flex: 1;
+overflow: hidden;
+}
+aside {
+width: 280px;
+background-color: var(--bg-light);
+border-right: 1px solid var(--border-color);
+padding: 2rem 1.5rem;
+overflow-y: auto;
+flex-shrink: 0;
+}
+aside h3 {
+font-family: var(--font-serif);
+font-size: 1.25rem;
+color: var(--text-dark);
+margin-bottom: 0.25rem;
+}
+aside p.subtitle {
+font-size: 0.85rem;
+color: var(--text-gray);
+margin-bottom: 2rem;
+}
+.dept-list {
+list-style: none;
+}
+.dept-list li {
+margin-bottom: 0.5rem;
+}
+.dept-list a {
+display: flex;
+align-items: center;
+gap: 1rem;
+padding: 0.75rem 1rem;
+text-decoration: none;
+color: var(--text-dark);
+border-radius: 8px;
+transition: background 0.2s, color 0.2s;
+font-weight: 500;
+}
+.dept-list a i {
+width: 20px;
+text-align: center;
+color: var(--text-gray);
+}
+.dept-list a:hover {
+background-color: #e2e8f0;
+color: var(--primary-navy);
+}
+.dept-list a:hover i {
+color: var(--primary-navy);
+}
+main {
+flex: 1;
+padding: 3rem 4rem;
+overflow-y: auto;
+}
+.hero {
+text-align: center;
+margin-bottom: 4rem;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+.hero h2 {
+font-family: var(--font-serif);
+font-size: 3rem;
+color: var(--primary-navy);
+margin-bottom: 1rem;
+line-height: 1.2;
+}
+.hero p {
+font-size: 1.1rem;
+color: var(--text-gray);
+line-height: 1.6;
+margin-bottom: 2rem;
+}
+.hero-buttons {
+display: flex;
+justify-content: center;
+gap: 1rem;
+}
+.btn {
+padding: 0.75rem 1.5rem;
+border-radius: 6px;
+font-weight: 600;
+cursor: pointer;
+border: none;
+font-size: 1rem;
+transition: transform 0.2s;
+}
+.btn:hover {
+transform: translateY(-2px);
+}
+.btn-primary {
+background-color: var(--primary-navy);
+color: white;
+}
+.btn-outline {
+background-color: white;
+border: 1px solid var(--border-color);
+color: var(--text-dark);
+}
+.features-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2rem;
+margin-bottom: 4rem;
+}
+.card {
+border: 1px solid var(--border-color);
+border-radius: 12px;
+padding: 2rem;
+background: white;
+transition: box-shadow 0.3s;
+}
+.card:hover {
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.card-icon {
+width: 48px;
+height: 48px;
+background-color: #eff6ff;
+color: var(--primary-navy);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.25rem;
+margin-bottom: 1rem;
+}
+.card h4 {
+font-family: var(--font-serif);
+font-size: 1.25rem;
+margin-bottom: 0.5rem;
+color: var(--text-dark);
+}
+.card p {
+color: var(--text-gray);
+line-height: 1.5;
+font-size: 0.95rem;
+}
+.about-section {
+background-color: #f1f5f9;
+padding: 3rem;
+border-radius: 12px;
+margin-bottom: 4rem;
+}
+.about-section h3 {
+font-family: var(--font-serif);
+font-size: 2rem;
+margin-bottom: 1rem;
+color: var(--text-dark);
+}
+.about-section p {
+color: var(--text-gray);
+margin-bottom: 1rem;
+line-height: 1.6;
+}
+.stats-container {
+display: flex;
+justify-content: space-between;
+margin-bottom: 2rem;
+text-align: center;
+}
+.stat-item h2 {
+font-family: var(--font-serif);
+font-size: 2.5rem;
+color: var(--primary-navy);
+font-weight: 700;
+}
+.stat-item p {
+color: var(--text-gray);
+font-size: 0.9rem;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo-area">
+<div class="logo-icon">
+<i class="fa-solid fa-book-open"></i>
+</div>
+<div class="logo-text">
+<h1>Prestige College</h1>
+<span>Online Book Store</span>
+</div>
+</div>
+<nav class="nav-links">
+<a href="home.html" class="btn-home"><i class="fa-solid fa-house"></i> Home</a>
+<a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+<a href="register.html"><i class="fa-solid fa-user-plus"></i> Registration</a>
+<a href="catalogue.html"><i class="fa-solid fa-book"></i> Catalogue</a>
+<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+</nav>
+</header>
+<div class="layout-wrapper">
+<aside>
+<h3>Departments</h3>
+<p class="subtitle">Browse books by department</p>
+<ul class="dept-list">
+<li><a href="computer-science.html"><i class="fa-solid fa-microchip"></i> Computer Science (CSE)</a></li>
+<li><a href="electronics.html"><i class="fa-solid fa-bolt"></i> Electronics (ECE)</a></li>
+<li><a href="mechanical.html"><i class="fa-solid fa-gears"></i> Mechanical (MECH)</a></li>
+<li><a href="civil.html"><i class="fa-solid fa-building"></i> Civil Engineering</a></li>
+</ul>
+</aside>
+<main>
+<section class="hero">
+<h2>Welcome to the Online Book Store</h2>
+<p>Your one-stop destination for all academic books. Browse our extensive collection of textbooks, reference
+materials, and study guides tailored for students and faculty of Prestige College.</p>
+<div class="hero-buttons">
+<button class="btn btn-primary">Browse Catalogue <i class="fa-solid fa-arrow-right"></i></button>
+<button class="btn btn-outline">Create Account</button>
+</div>
+</section>
+<section class="features-grid">
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-clock"></i></div>
+<h4>Quick Delivery</h4>
+<p>Get your books delivered within 3-5 business days directly to your dorm or home address.</p>
+</div>
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-certificate"></i></div>
+<h4>Quality Assured</h4>
+<p>Only authentic books from verified publishers and updated editions for your curriculum.</p>
+</div>
+</section>
+<section class="about-section">
+<h3>About Our Bookstore</h3>
+<p>The Prestige College Online Book Store was established to provide easy access to academic resources for
+our students and faculty. We partner directly with leading publishers to ensure you get authentic books at competitive
+prices.</p>
+<p>Navigate through our department-wise catalogue using the sidebar on the left, or browse our complete
+collection. Don't forget to create an account to enjoy exclusive discounts and track your orders!</p>
+</section>
+<section class="features-grid">
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+<h4>Vast Collection</h4>
+<p>Access thousands of academic books across all departments including rare reference materials.</p>
+</div>
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+<h4>Student Discounts</h4>
+<p>Special pricing models designed specifically for students and faculty members.</p>
+</div>
+</section>
+<section class="stats-container">
+<div class="stat-item">
+<h2>5,000+</h2>
+<p>Books Available</p>
+</div>
+<div class="stat-item">
+<h2>4</h2>
+<p>Departments</p>
+</div>
+<div class="stat-item">
+<h2>50+</h2>
+<p>Publishers</p>
+</div>
+<div class="stat-item">
+<h2>10,000+</h2>
+<p>Happy Students</p>
+</div>
+</section>
+</main>
+</div>
+</body>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>
